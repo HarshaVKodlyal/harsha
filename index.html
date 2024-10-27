@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>
+            day5 frontend
+        </title>
+        <script src="day5.js" type="text/javascript"> 
+        </script>
+    </head>
+    <body>
+        <div class="container"></div>
+        <!-- <label for="username">username</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password">
+        <br> -->
+
+        <label for="">first name :</label>
+        <input type="text" name="firstname" id="firstname">
+        <br>
+        <label for="">Second name :</label>
+        <input type="text" name="firstname" id="secondname">
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="" >Phone No :</label>
+        <input type="number" name="phone no" id="phoneno">
+        <br>
+        <label for="">Create password :</label>
+        <input type="password" name="pass" id="password">
+        <br>
+        <label for="">Reenter password :</label>
+        <input type="password" name="pass" id="reenterpassword">
+        <br>
+        <button onclick="signup()">submit</button>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+// console.log("this is javascript");
+// var name="GMIT"
+
+// function f1(){
+//     console.log("number : "+name);
+// }
+// // function f2(){
+// //     console.log("number"+name);
+// // }
+// f1();
+// function add(num1,num2){
+//     console.log(num1+parseInt(num2));
+// }
+// add(2,"4");
+// {
+//     var a=10;
+//     console.log(+a);
+//     let b=20;
+//     console.log(+b);
+//     const c=30;
+//     console.log(+c);
+// }
+// var username="Gmit";
+// var password="Gmit123";
+
+// function login(){
+//     // console.log("called");
+//     var inputname=document.getElementById("username").value;
+//     var inputpassword=document.getElementById("password").value;
+
+//     if(inputname==username && inputpassword==password)
+//     {
+//         console.log("success");
+//     }else{
+//         console.log("failure");
+//     }
+//     // console.log(inputname);
+//     // console.log(inputpassword);
+
+// }
+function signup(){
+    let inputfirstname=document.getElementById("firstname").value;
+    let inputsecondname=document.getElementById("secondname").value;
+    let inputemail=document.getElementById("email").value;
+    var inputphoneno=document.getElementById("phoneno").value;
+    var inputpassword=document.getElementById("password").value;
+    var inputrepassword=document.getElementById("reenterpassword").value;
+    // console.log(inputfirstname);
+    // console.log(inputsecondname);
+    // console.log(inputemail);
+    // console.log(inputphoneno);
+    // console.log(inputpassword);
+    // console.log(inputrepassword);
+    // console.log(inputfirstnamep,inputsecondname);
+    let validatefname=validatepage(inputfirstname,inputsecondname);
+    // let validatesname=validatepage(inputsecondname);
+    // console.log(validatefname,validatesname);
+    console.log(validatefname);
+ 
+}
+function validatepage(inputfname,inputsname){
+    if(inputfname.length>5 && inputsname.length>5)
+        return true;
+    else
+        return false;
+}
